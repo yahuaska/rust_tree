@@ -40,8 +40,23 @@ fn ls_dir(path: &str, indent: usize) {
 }
 
 fn main() {
+    /*
+    Some day I'll make colorization (:
+    */
+    /*
+    for color in env::vars().filter(|x| x.0 == "LS_COLORS").last().unwrap().1.split(":") {
+        println!("\x1b[{}m color \x1b[0m", color.split("=").last().unwrap());
+    }
+    */
+
     match env::args().nth(1) {
-        Some(path) => ls_dir(&path, 0),
-        None => ls_dir("./", 0),
+        Some(path) => {
+            println!("{}", path);
+            ls_dir(&path, 0)
+        },
+        None => {
+            println!(".");
+            ls_dir("./", 0)
+        },
     }
 }
