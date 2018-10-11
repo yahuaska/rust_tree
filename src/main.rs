@@ -3,7 +3,7 @@ use std::env;
 
 fn print_el(path_buff: &std::fs::DirEntry, indent: usize, is_last: bool) {
     println!("{}{}─ {}",
-        "  ".repeat(indent),
+        "│  ".repeat(indent),
         if is_last {"└"}  else {"├"},
         match path_buff.path().file_name() {
             Some(file_name) => match file_name.to_str() {
