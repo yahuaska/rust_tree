@@ -35,7 +35,7 @@ fn ls_dir(path: &str, indent: usize) {
                 None => print!(""),
             }
         },
-        Err(_) => print!("Couldn't read dir: {}", path),
+        Err(_) => println!("Couldn't read dir: {}", path),
     };
 }
 
