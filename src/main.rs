@@ -87,15 +87,6 @@ fn main() {
     };
 
     println!("PATH = {}, depth = {:?}", path, depth);
-
-    match path {
-        "." => {
-            println!(".");
-            ls_dir("./", 0, depth)
-        }
-        _ => {
-            println!("{}", path);
-            ls_dir(&path, 0, depth)
-        }
-    }
+    println!("{}", path);
+    ls_dir(&path, 0, depth)
 }
