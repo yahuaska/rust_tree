@@ -1,6 +1,18 @@
 ## Usage
 ```
-tree [path]
+USAGE:
+    tree [OPTIONS] [PATH]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -d, --depth <DEPTH>    
+
+ARGS:
+    <PATH>    Path to show
+
 ```
 Example output:
 ```
