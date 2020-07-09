@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Ringo <ringo.working@gmail.com>"]
 
 [dependencies]
+clap=""
