@@ -81,10 +81,7 @@ fn main() {
         None => -1,
     };
 
-    let path = match args.value_of("PATH") {
-        Some(expr) => expr,
-        None => ".",
-    };
+    let path = args.value_of("PATH").unwrap_or(".");
 
     println!("PATH = {}, depth = {:?}", path, depth);
     println!("{}", path);
